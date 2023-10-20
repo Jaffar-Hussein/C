@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(){
+    int anne = 2000;
+
+    if (annee % 4 == 0 and annee % 100 != 0 and  annee % 400 == 0)
+		print("Leap year");
+    else
+	    print("Not Leap");
+}
