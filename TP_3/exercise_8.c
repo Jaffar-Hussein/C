@@ -10,6 +10,12 @@ int main(int argc,char * argv[]){
     printf("%s",alpha_king(argv[1]));
 }
 
+/**
+ * Determines whether a given string is a palindrome.
+ * 
+ * @param suspect The string to check for palindrome-ness.
+ * @return 1 if the string is a palindrome, 0 otherwise.
+ */
 int palindrome_discoverer(char * suspect){
     int length = strlen(suspect);
     int vote = 1;
@@ -23,6 +29,13 @@ int palindrome_discoverer(char * suspect){
     return vote;
 }
 
+/**
+ * Returns a new string containing only the alphabetical characters from the input string.
+ * 
+ * @param mixed The input string to extract alphabetical characters from.
+ * @return A new string containing only the alphabetical characters from the input string.
+ *         The returned string must be freed by the caller.
+ */
 char *alpha_king(char *mixed) {
     int length = strlen(mixed);
     char *result = malloc(length + 1);
@@ -34,5 +47,6 @@ char *alpha_king(char *mixed) {
         }
     }
     result[j] = '\0'; // add null terminator to result array
+    free;
     return result;
 }
