@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/jaffarhussein/Development/M1 Bio Info/Semester 01/Mini Info I/C/TP_1",
-      "program": "/Users/jaffarhussein/Development/M1 Bio Info/Semester 01/Mini Info I/C/TP_1/build/Debug/outDebug"
+      "cwd": ".",
+      "program": "build/Debug/outDebug"
     }
   ]
 }
