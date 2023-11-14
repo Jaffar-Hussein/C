@@ -3,23 +3,33 @@
 void cocktail_shaker(int query_table[N]);
 void swapper(int *a,int *b);
 int main(){
-    int list[N] = {1, 2, 3,5,6,7,8,9,4,0};
-      for (int i = 0; i < N; i++)
+    int list[N] = {1, 2, 78,5,6,7,8,9,4,0};
+    printf("Original List : ");
+    for (int i = 0; i < N; i++)
     {
         printf("%d,",list[i]);
     }
     printf("\n");
     cocktail_shaker(list);
-   
+    printf("Sorted List   : ");
+    for (int i = 0; i < N; i++)
+    {
+        printf("%d,",list[i]);
+    }
     printf("\n");
 }
 
+/**
+ * Sorts an array of integers using the cocktail shaker sort algorithm.
+ * 
+ * @param query_table The array of integers to be sorted.
+ */
 void cocktail_shaker(int query_table[N]){
     int swapped;
     do{    
         swapped = 0;
         // Swap going forward
-        for(int i = 0; i < N;i++){
+        for(int i = 0; i < N-1;i++){
             if(query_table[i] > query_table[i+1]){
                 swapper(&query_table[i],&query_table[i+1]);
                 swapped = 1;
@@ -38,16 +48,16 @@ void cocktail_shaker(int query_table[N]){
                 swapped = 1;
             }
         }
-    } while (swapped != 1);
-     for (int i = 0; i < N; i++)
-    {
-        printf("%d,",query_table[i]);
-    }
-   
-
+    } while (swapped);
 }
-void swapper(int *a,int *b){
-    // TODO : I need more work on this pointer thing
+/**
+ * Swaps the values of two integer pointers.
+ * 
+ * @param a Pointer to the first integer.
+ * @param b Pointer to the second integer.
+ */
+void swapper(int *a, int *b) {
+    // TODO:More explanations of pointers needed or exercises
     int temp = *a;
     *a = *b;
     *b = temp;
