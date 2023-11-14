@@ -1,5 +1,7 @@
 # C Programming Class Assignments 🌵
 
+<img src="https://github.com/Jaffar-Hussein/C/assets/57854451/3dbbf115-3940-4cf5-bb80-bf3a8e7dcd86.png" width="100" height="100">
+
 This repository contains my solutions for the C programming class assignments.
 
 ## Structure
