@@ -47,6 +47,13 @@ int main (){
     set_chars(student1.name,"John");
     printf("%s",student1.name);
 }  
+
+/**
+ * Copies the characters of a string to a character array.
+ * 
+ * @param list The character array to copy the string to.
+ * @param chaine The string to be copied.
+ */
 void set_chars(char list[],char * chaine){
     int len = strlen(chaine);
     for(int i; i <len; i++){

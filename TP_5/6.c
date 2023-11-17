@@ -32,6 +32,13 @@ int main(){
     lucky(&player1);
 }
 
+/**
+ * This function checks if a player has an ACE card in their hand.
+ * If the player has an ACE card, it prints "Lucky" in green color.
+ * If the player does not have an ACE card, it prints "No ACE" in red color.
+ * 
+ * @param player a pointer to the player whose hand is being checked
+ */
 void lucky(Player *player){
     int flag = 0;
     int i = 0;

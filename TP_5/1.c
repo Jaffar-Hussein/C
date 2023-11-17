@@ -50,6 +50,7 @@ void cocktail_shaker(int query_table[N]){
         }
     } while (swapped);
 }
+
 /**
  * Swaps the values of two integer pointers.
  * 

@@ -16,24 +16,16 @@ int main(){
     // result[0]='\0';
     combinator(result,one,two);
 }
+
+/**
+ * Combines two strings and stores the result in a third string.
+ * 
+ * @param result The string where the result will be stored.
+ * @param one The first string to be combined.
+ * @param two The second string to be combined.
+ */
 void combinator(char *result,char *one,char *two){
-    // if its odd
-    // if its even
     strcat(result,one);
     strcat(result,two);
-    // int i = 0;
-    // while(one[i] != '\0'){
-    //     result[i]=one[i];
-    //     i++;
-    // }
-    // int j = 0;
-    // while (two[j] != '\0')
-    // {
-    //     result[i]=two[j];
-    //     j++;
-    //     i++;
-    // }
-    // result[i]='\0';
     printf("Combination : %s\n",result);
-    
 }
