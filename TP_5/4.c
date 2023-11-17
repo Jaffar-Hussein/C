@@ -1,10 +1,16 @@
 #include <stdio.h>
+
+/**
+ * @brief Defines a struct for coordinates with integer values for abscisse and ordonne.
+ * 
+ */
 typedef struct Coordinates {
     int abscisse;
     int ordonne;
 } Coordinates;
 void doubleCoordinates(Coordinates *pointA,Coordinates *pointB);
 Coordinates coordonneesVecteur(Coordinates *pointA,Coordinates *pointB);
+
 int main(){
     Coordinates pointA;
     Coordinates pointB;
@@ -22,6 +28,13 @@ int main(){
     Coordinates vect = coordonneesVecteur(&pointA,&pointB);
     printf("Vect : (X : %i,Y : %i)\n",vect.abscisse,vect.ordonne);
 }
+
+/**
+ * Doubles the coordinates of two points.
+ * 
+ * @param pointA Pointer to the first point's coordinates.
+ * @param pointB Pointer to the second point's coordinates.
+ */
 void doubleCoordinates(Coordinates *pointA,Coordinates *pointB){
     pointA -> abscisse = (pointA->abscisse)*2;
     pointB -> abscisse = (pointB->abscisse)*2;
@@ -29,6 +42,13 @@ void doubleCoordinates(Coordinates *pointA,Coordinates *pointB){
     pointB -> ordonne = (pointB->ordonne)*2;
 }
 
+/**
+ * Calculates the coordinates of a vector given two points.
+ * 
+ * @param pointA Pointer to the first point.
+ * @param pointB Pointer to the second point.
+ * @return The coordinates of the resulting vector.
+ */
 Coordinates coordonneesVecteur(Coordinates *pointA,Coordinates *pointB){
     Coordinates vect;
     vect.abscisse = pointB -> abscisse - pointA -> abscisse;
