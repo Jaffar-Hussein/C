@@ -8,16 +8,11 @@ Each assignment is placed in its own directory. The directory name corresponds t
 
 ## Assignments
 
-1. [Assignment 1 - Introduction to C](./TP_1/)
-   - Exercises:
-     - Exercise 1 - Hello World (`./TP_1/1.c`)
-     - Exercise 2 - Basic Arithmetic (`/assignment1/exercise2`)
-     - Exercise 3 - Control Structures (`/assignment1/exercise3`)
-2. Assignment 2 - Arrays and Strings
-   - Exercises:
-     - Exercise 1 - Array Manipulation (`/assignment2/exercise1`)
-     - Exercise 2 - String Manipulation (`/assignment2/exercise2`)
-     - Exercise 3 - Multidimensional Arrays (`/assignment2/exercise3`)
+1. [Assignment 1](./TP_1/) - Introduction to C](./TP_1/)
+2. [Assignment 2](./TP_2/) - Arrays and Strings
+3. [Assignment 3](./TP_3) - 2D, 3D Arrays and Pointers
+4. [Assignment 4](./TP_4) - Loops and Conditions
+5. [Assignment 5](./TP_5) - Structs and Enums
 
 ## Building and Running
 
