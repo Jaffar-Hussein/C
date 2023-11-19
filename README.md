@@ -8,7 +8,7 @@ Each assignment is placed in its own directory. The directory name corresponds t
 
 ## Assignments
 
-1. [Assignment 1](./TP_1/) - Introduction to C](./TP_1/)
+1. [Assignment 1](./TP_1/) - Introduction to C
 2. [Assignment 2](./TP_2/) - Arrays and Strings
 3. [Assignment 3](./TP_3) - 2D, 3D Arrays and Pointers
 4. [Assignment 4](./TP_4) - Loops and Conditions
