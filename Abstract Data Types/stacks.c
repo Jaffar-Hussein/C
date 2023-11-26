@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 
 #define MAX_SIZE 100
 
@@ -105,17 +107,36 @@ int areParenthesesBalanced(char expression[]) {
     return isEmpty(&stack);
 }
 
-    /**
-     * Evaluates a postfix expression.
-     *
-     * @param expression The postfix expression to be evaluated.
-     * @return The result of the evaluation.
-     */
-    int evaluatePostfix(char expression[]) {
-        Stack stack;
-        initialize(&stack);
-        
+
+/**
+ * Evaluates a postfix expression and returns the result.
+ *
+ * @param expression The postfix expression to be evaluated.
+ * @return The result of the evaluation.
+ */
+int evaluatePostfix(char expression[]) {
+    Stack stack;
+    initialize(&stack);
+
+    for (int i = 0; expression[i] != '\0'; i++)
+    {
+        if (isdigit(expression[i]) != 0)
+        {
+            push(&stack,expression[i] - '0');
+        }else{
+            int first = pop(&stack);
+            int second = pop(&stack);
+            switch (expression[i])
+            {
+            case '*': push(&stack, first * second); break;
+            case '/': push(&stack, first / second); break;
+            case '+': push(&stack, first + second); break;
+            case '-': push(&stack, first - second); break;
+            }
+        }
     }
+    return pop(&stack);
+}
 
 int main() {
     char expression[MAX_SIZE];
@@ -130,8 +151,8 @@ int main() {
     // }
 
     printf("Enter a postfix expression: ");
-    fgets(expression, MAX_SIZE, stdin);
-
+    // fgets(expression, MAX_SIZE, stdin);
+    strcpy(expression, "12+4*");
     int result = evaluatePostfix(expression);
 
     printf("Result: %d\n", result);
