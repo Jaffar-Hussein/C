@@ -3,23 +3,48 @@
 
 #define MAX_SIZE 100
 
-// Structure to represent a stack
-typedef struct Stack {
-    int top;
-    char items[MAX_SIZE];
-}Stack ;
 
-// Function to initialize an empty stack
+/**
+ * @struct Stack
+ * @brief Represents a stack data structure.
+ * 
+ * The Stack struct contains the top index and an array of items.
+ * The top index represents the index of the topmost element in the stack.
+ * The items array stores the elements of the stack.
+ */
+typedef struct Stack {
+    int top; /**< The index of the topmost element in the stack. */
+    char items[MAX_SIZE]; /**< The array of items in the stack. */
+} Stack;
+
+
+/**
+ * Initializes the stack by setting the top index to -1.
+ *
+ * @param stack The stack to be initialized.
+ */
 void initialize(struct Stack *stack) {
     stack->top = -1;
 }
 
-// Function to check if the stack is empty
+
+/**
+ * Checks if the stack is empty.
+ * 
+ * @param stack The stack to be checked.
+ * @return 1 if the stack is empty, 0 otherwise.
+ */
 int isEmpty(struct Stack *stack) {
     return stack->top == -1;
 }
 
-// Function to push an element onto the stack
+
+/**
+ * Pushes an item onto the stack.
+ * 
+ * @param stack The stack to push the item onto.
+ * @param item The item to be pushed onto the stack.
+ */
 void push(struct Stack *stack, char item) {
     if (stack->top == MAX_SIZE - 1) {
         printf("Stack overflow\n");
@@ -28,7 +53,14 @@ void push(struct Stack *stack, char item) {
     stack->items[++stack->top] = item;
 }
 
-// Function to pop an element from the stack
+
+/**
+ * Removes and returns the top element from the stack.
+ * If the stack is empty, it prints an error message and exits the program.
+ *
+ * @param stack The stack from which to pop the element.
+ * @return The top element of the stack.
+ */
 char pop(struct Stack *stack) {
     if (isEmpty(stack)) {
         printf("Stack underflow\n");
@@ -37,6 +69,12 @@ char pop(struct Stack *stack) {
     return stack->items[stack->top--];
 }
 
+/**
+ * Checks if the parentheses in the given expression are balanced.
+ *
+ * @param expression The expression to check for balanced parentheses.
+ * @return 1 if the parentheses are balanced, 0 otherwise.
+ */
 int areParenthesesBalanced(char expression[]) {
     // Implementation using the stack
     Stack stack;
@@ -67,18 +105,36 @@ int areParenthesesBalanced(char expression[]) {
     return isEmpty(&stack);
 }
 
+    /**
+     * Evaluates a postfix expression.
+     *
+     * @param expression The postfix expression to be evaluated.
+     * @return The result of the evaluation.
+     */
+    int evaluatePostfix(char expression[]) {
+        Stack stack;
+        initialize(&stack);
+        
+    }
 
 int main() {
     char expression[MAX_SIZE];
 
-    printf("Enter an expression: ");
+    // printf("Enter an expression: ");
+    // fgets(expression, MAX_SIZE, stdin);
+
+    // if (areParenthesesBalanced(expression)) {
+    //     printf("Parentheses are balanced\n");
+    // } else {
+    //     printf("Parentheses are not balanced\n");
+    // }
+
+    printf("Enter a postfix expression: ");
     fgets(expression, MAX_SIZE, stdin);
 
-    if (areParenthesesBalanced(expression)) {
-        printf("Parentheses are balanced\n");
-    } else {
-        printf("Parentheses are not balanced\n");
-    }
+    int result = evaluatePostfix(expression);
+
+    printf("Result: %d\n", result);
 
     return 0;
 }
