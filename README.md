@@ -13,6 +13,7 @@ Each assignment is placed in its own directory. The directory name corresponds t
 3. [Assignment 3](./TP_3) - 2D, 3D Arrays and Pointers
 4. [Assignment 4](./TP_4) - Loops and Conditions
 5. [Assignment 5](./TP_5) - Structs and Enums
+6. [Assignment 6](./TP_6) - Read and Writing Files
 
 ## Building and Running
 
