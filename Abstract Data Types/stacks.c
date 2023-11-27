@@ -138,6 +138,38 @@ int evaluatePostfix(char expression[]) {
     return pop(&stack);
 }
 
+void numberClassifier(int x,int n){
+    Stack stack;
+    initialize(&stack);
+    int list[n];
+    int temp;
+    int i = 0;
+    do {
+        printf("Enter a number: ");
+        scanf("%d",&temp);
+    //     if (isEmpty(&stack) == 0){
+    //         int top = pop(&stack);
+    //         if(temp < top){
+    //             list[i] = temp;
+    //             push(&stack, top);
+    //             i++;
+    //         }else{
+    //             list[i] = top;
+    //             push(&stack, temp);
+    //             i++;
+    //         }
+    //     }else{
+    //         push(&stack, temp);
+    //     }
+    //     n--;
+    // }while (n != 0);
+    
+    for (int i = 0; i < x; i++)
+    {
+        printf("%d ",list[i]);
+    }
+}
+
 int main() {
     char expression[MAX_SIZE];
 
@@ -150,12 +182,14 @@ int main() {
     //     printf("Parentheses are not balanced\n");
     // }
 
-    printf("Enter a postfix expression: ");
-    // fgets(expression, MAX_SIZE, stdin);
-    strcpy(expression, "12+4*");
-    int result = evaluatePostfix(expression);
+    // printf("Enter a postfix expression: ");
+    // // fgets(expression, MAX_SIZE, stdin);
+    // strcpy(expression, "12+4*");
+    // int result = evaluatePostfix(expression);
 
-    printf("Result: %d\n", result);
+    // printf("Result: %d\n", result);
+
+    numberClassifier(5,5);
 
     return 0;
 }
