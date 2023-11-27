@@ -144,9 +144,9 @@ void numberClassifier(int x,int n){
     int list[n];
     int temp;
     int i = 0;
-    do {
-        printf("Enter a number: ");
-        scanf("%d",&temp);
+    // do {
+    //     printf("Enter a number: ");
+    //     scanf("%d",&temp);
     //     if (isEmpty(&stack) == 0){
     //         int top = pop(&stack);
     //         if(temp < top){
