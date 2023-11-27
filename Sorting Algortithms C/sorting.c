@@ -29,7 +29,7 @@ void bubble_sort(int t[MAX])
     while (switched)
     {
         switched = 0;
-        for (int i = 0; i < MAX-1; i++)
+        for (int i = 0; i < MAX - 1; i++)
         {
             if (t[i] > t[i + 1])
             {
@@ -52,7 +52,7 @@ void cocktail_sort(int t[MAX])
     {
         int k = 0;
         switched = 0;
-        for (int i = 0; i < MAX-1-k; i++)
+        for (int i = 0; i < MAX - 1 - k; i++)
         {
             if (t[i] > t[i + 1])
             {
